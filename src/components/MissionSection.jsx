@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import missionImage from "../assets/mission.jpg"; // replace with your actual file path
+import missionImage from "../assets/Mission.jpg";
 
 const tabData = {
   "Our Mission": {
