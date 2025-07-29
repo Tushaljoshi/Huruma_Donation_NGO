@@ -13,7 +13,7 @@ export default function SingleCausesPage() {
             <div
                 className="relative h-[600px] w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
                 style={{
-                    backgroundImage: 'url("./src/assets/causes.jpg")',
+                    backgroundImage: 'url("/causes.jpg")',
                 }}
             >
                 <div className="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -31,7 +31,7 @@ export default function SingleCausesPage() {
                         {[1, 2, 3, 4, 5].map((id) => (
                             <div key={id} className="relative group overflow-hidden rounded-lg shadow">
                                 <img
-                                    src={`./src/assets/child${id}.jpeg`}
+                                    src={`/child${id}.jpeg`}
                                     alt={`Child ${id}`}
                                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                                 />

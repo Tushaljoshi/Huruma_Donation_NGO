@@ -12,7 +12,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <div className="relative h-85 bg-black">
         <img
-          src="./src/assets/event.jpg"
+          src="/event.jpg"
           alt="Contact Banner"
           className="w-full h-full object-cover"
         />
@@ -22,12 +22,12 @@ export default function ContactPage() {
       </div>
 
       {/* Contact Section */}
-      <section className="bg-white py-12 px-4 lg:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <section className="bg-white py-5 px-4 lg:py-10">
+        <div className="grid grid-cols-1 grid-cols-2 gap-5">
           {/* Left Panel - Quick Contact Info */}
-          <div className="bg-[#231E66] text-white py-6 px-4 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold mb-6">Quick Contact</h3>
-            <div className="space-y-6 text-lg">
+          <div className="bg-[#231E66] text-white h-22 px-4 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-semibold mb-10">Quick Contact</h3>
+            <div className="space-y-10 text-lg">
               <div>
                 <MapPin className="inline-block mr-2 text-orange-400" />
                 <span>205 Fida Wallinton, Tonga, New York, Canada</span>

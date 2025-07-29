@@ -9,28 +9,28 @@ const posts = [
         id: 1,
         title: "Delicate Contempt Received Two Yet Advanced",
         date: "June 30, 2024",
-        image: <img src=".assets/charity.jpeg" alt="Cause" className="rounded-md w-full mb-6" />
+        image: <img src="/charity.jpeg" alt="Cause" className="rounded-md w-full mb-6" />
 
     },
     {
         id: 2,
         title: "Future Plan & Strategy For Construction",
         date: "June 30, 2024",
-        image: <img src="assets/charity.jpeg" alt="Cause" className="rounded-md w-full mb-6" />
+        image: <img src="/charity.jpeg" alt="Cause" className="rounded-md w-full mb-6" />
 
     },
     {
         id: 3,
         title: "Melancholy Devonshire Alteration",
         date: "June 30, 2024",
-        image: <img src="assets/charity.jpeg" alt="Cause" className="rounded-md w-full mb-6" />
+        image: <img src="/charity.jpeg" alt="Cause" className="rounded-md w-full mb-6" />
 ,
     },
     {
         id: 4,
         title: "Delicate Contempt Received Two Yet Advanced",
         date: "June 30, 2024",
-        image: <img src="./src/assets/charity.jpeg" alt="Cause" className="rounded-md w-full mb-6" />
+        image: <img src="/charity.jpeg" alt="Cause" className="rounded-md w-full mb-6" />
 ,
     },
 ];
@@ -41,7 +41,7 @@ export default function SingleCausesPage() {
         <div className="w-full">
             <Navbar />
             {/* Hero Section */}
-            <div className="relative h-64 bg-cover bg-center text-white flex items-center justify-center" style={{ backgroundImage: 'url("./src/assets/causes.jpg")' }}>
+            <div className="relative h-64 bg-cover bg-center text-white flex items-center justify-center" style={{ backgroundImage: 'url("/causes.jpg")' }}>
                 <div className="absolute inset-0 bg-black bg-opacity-60"></div>
                 <div className="relative z-10 text-center">
                     <h1 className="text-4xl font-bold">Causes Details</h1>
@@ -56,7 +56,7 @@ export default function SingleCausesPage() {
                     <div className="lg:col-span-2 bg-white p-4 rounded shadow-lg">
                         {/* Cause Image */}
                         <img
-                            src=".  /src/assets/charity.jpg"
+                            src="/charity.jpg"
                             alt="Cause"
                             className="rounded-md w-full mb-6"
                         />
@@ -255,7 +255,7 @@ export default function SingleCausesPage() {
                         {[1, 2, 3, 4, 5].map((id) => (
                             <div key={id} className="relative group overflow-hidden rounded-lg shadow">
                                 <img
-                                    src={`./assets/child${id}.jpeg`}
+                                    src={`/child${id}.jpeg`}
                                     alt={`Child${id}`}
                                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                                 />

@@ -1,8 +1,8 @@
 import React from "react";
 import { User } from "lucide-react";
-import new1 from "../assets/new1.jpg";
-import new2 from "../assets/new2.jpg";
-import new3 from "../assets/new3.jpg";
+import new1 from "/new1.jpg";
+import new2 from "/new2.jpg";
+import new3 from "/new3.jpg";
 
 const newsPosts = [
   {

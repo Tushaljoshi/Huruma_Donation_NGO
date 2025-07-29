@@ -72,7 +72,7 @@ const Footer = () => {
 
           <div className="flex gap-4 mb-6">
             <img
-              src="./src/assets/new1.jpg" // Replace with your actual image path
+              src="/new1.jpg" // Replace with your actual image path
               alt="news"
               className="w-16 h-16 object-cover rounded"
             />
@@ -86,7 +86,7 @@ const Footer = () => {
 
           <div className="flex gap-4">
             <img
-              src="./src/assets/new2.jpg" // Replace with your actual image path
+              src="/new2.jpg" // Replace with your actual image path
               alt="news"
               className="w-16 h-16 object-cover rounded"
             />

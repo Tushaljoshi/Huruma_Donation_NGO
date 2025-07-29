@@ -11,6 +11,9 @@ import TestimonialsSection from './components/TestimonialsSection';
 import LatestNewsSection from './components/LatestNewsSection';
 import Footer from './components/Footer';
 import MissionSection from './components/MissionSection';
+import WhatWeDoSection from './components/WhatWeDoSection';
+import VolunteerStepSection from "./components/VolunteerStepsSection"
+import HelpSection from './components/HelpSection';
 
 function App() {
   return (
@@ -21,10 +24,14 @@ function App() {
       <MapSection />
       <CounterSection />
       <CausesSection />
+      <VolunteerStepSection/>
+      <WhatWeDoSection/>
       <MissionSection/>
       <TeamSection/>
       <EventsSection/>
+
       <TestimonialsSection/>
+      <HelpSection/>
       <LatestNewsSection/>
       <Footer/>
     </div>

@@ -1,41 +1,32 @@
-import React, { useEffect, useState } from "react";
-import { HandHeart, Users, MapPin, Baby } from "lucide-react";
+import React from "react";
+import { motion } from "framer-motion";
 
 const counters = [
-  { icon: <HandHeart size={36} className="text-orange-500" />, label: "Funds Raised", value: 1250000 },
-  { icon: <Users size={36} className="text-orange-500" />, label: "Volunteers", value: 8600 },
-  { icon: <MapPin size={36} className="text-orange-500" />, label: "States Reached", value: 28 },
-  { icon: <Baby size={36} className="text-orange-500" />, label: "Children Helped", value: 48000 },
+  { label: "Funds Raised", value: 1250000 },
+  { label: "Volunteers", value: 8600 },
+  { label: "States Reached", value: 28 },
+  { label: "Children Helped", value: 48000 },
 ];
 
 const CounterSection = () => {
-  const [counts, setCounts] = useState(counters.map(() => 0));
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCounts((prev) =>
-        prev.map((val, index) =>
-          val < counters[index].value
-            ? Math.min(val + Math.ceil(counters[index].value / 50), counters[index].value)
-            : val
-        )
-      );
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="py-16 bg-orange-50">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 text-center relative">
         {counters.map((counter, index) => (
-          <div key={index} className="bg-white rounded-xl shadow p-6 hover:shadow-md transition">
-            <div className="flex justify-center mb-3">{counter.icon}</div>
-            <h3 className="text-3xl font-bold text-gray-800">
-              {counts[index].toLocaleString()}
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            className={`relative p-6 transition rounded-xl ${
+              index !== counters.length - 1 ? "border-r border-gray-300" : ""
+            }`}
+          >
+            <p className="text-gray-700 mt-1 text-lg font-large">{counter.label}</p>
+            <h3 className="text-5xl font-extrabold text-orange-500">
+              +{counter.value.toLocaleString()}
             </h3>
-            <p className="text-gray-600 mt-1">{counter.label}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

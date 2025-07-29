@@ -3,9 +3,9 @@ import { Instagram } from 'lucide-react';
 import { FaInstagram } from "react-icons/fa";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import new1 from '../assets/new1.jpg';
-import new2 from '../assets/new2.jpg';
-import new3 from '../assets/new3.jpg';
+import new1 from '/new1.jpg';
+import new2 from '/new2.jpg';
+import new3 from '/new3.jpg';
 
 const blogData = [
     {
@@ -91,7 +91,7 @@ const BlogPage = () => {
             {/* Hero Section */}
             <section
                 className="relative h-[700px] bg-cover bg-center flex items-center justify-center text-white"
-                style={{ backgroundImage: "url('./src/assets/event.jpg')" }}
+                style={{ backgroundImage: "url('/event.jpg')" }}
             >
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
                     <h1 className="text-4xl font-bold">Check Our Blogs</h1>
@@ -152,7 +152,7 @@ const BlogPage = () => {
                         {[1, 2, 3, 4, 5].map((id) => (
                             <div key={id} className="relative group overflow-hidden rounded-lg shadow">
                                 <img
-                                    src={`./src/assets/child${id}.jpeg`}
+                                    src={`/child${id}.jpeg`}
                                     alt={`Child ${id}`}
                                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                                 />

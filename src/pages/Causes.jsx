@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 const causesData = [
     {
         id: 1,
-        image: "./src/assets/child1.jpeg",
+        image: "/child1.jpeg",
         tag: "#Education",
         title: "Sponsor a Child’s Education",
         raised: "₹25,000",
@@ -16,7 +16,7 @@ const causesData = [
     },
     {
         id: 2,
-        image: "./src/assets/child2.jpeg",
+        image: "/child2.jpeg",
         tag: "#Donation",
         title: "Provide Clean Drinking Water",
         raised: "₹10,000",
@@ -26,7 +26,7 @@ const causesData = [
     },
     {
         id: 3,
-        image: "./src/assets/child3.jpeg",
+        image: "/child3.jpeg",
         tag: "#Medical",
         title: "Help Children with Medication",
         raised: "₹40,000",
@@ -36,7 +36,7 @@ const causesData = [
     },
     {
         id: 4,
-        image: "./src/assets/child4.jpeg",
+        image: "/child4.jpeg",
         tag: "#Education",
         title: "Build a School Library",
         raised: "₹12,000",
@@ -46,7 +46,7 @@ const causesData = [
     },
     {
         id: 5,
-        image: "./src/assets/child5.jpeg",
+        image: "/child5.jpeg",
         tag: "#Support",
         title: "Distribute Winter Clothes",
         raised: "₹8,000",
@@ -56,7 +56,7 @@ const causesData = [
     },
     {
         id: 6,
-        image: "./src/assets/child6.jpeg",
+        image: "/child6.jpeg",
         tag: "#Education",
         title: "Start a Digital Literacy Program",
         raised: "₹30,000",
@@ -66,7 +66,7 @@ const causesData = [
     },
     {
         id: 7,
-        image: "./src/assets/child7.jpeg",
+        image: "/child7.jpeg",
         tag: "#Medical",
         title: "Emergency Medical Fund",
         raised: "₹18,000",
@@ -98,7 +98,7 @@ const CausesPage = () => {
             {/* Hero */}
             <section
                 className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-white"
-                style={{ backgroundImage: "url('./src/assets/hero1.jpg')" }}
+                style={{ backgroundImage: "url('/hero1.jpg')" }}
             >
                 <h1 className="text-4xl font-bold drop-shadow-lg">Our Causes</h1>
             </section>
@@ -128,8 +128,8 @@ const CausesPage = () => {
                                 <div
                                     className={`
                     absolute inset-x-0 bottom-0 z-5
-                    rounded-t-[40px] px-6 pb-6 pt-10 transition-all duration-300 ease-in-out 
-                    translate-y-[8%] group-hover:translate-y-0 
+                    rounded-t-[40px] px-6 pb-6 pt-10 transition-all duration-500 ease-in-out 
+                    translate-y-[1%] group-hover:translate-y-0 
                     bg-[#2f2e41] group-hover:bg-orange-500
                   `}
                                 >
@@ -197,13 +197,11 @@ const CausesPage = () => {
             </section>
             <section className="bg-gray-100 py-12 px-4">
                 <div className="max-w-9xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold mb-8">Children We Helped</h2>
-
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 ">
                         {[1, 2, 3, 4, 5].map((id) => (
                             <div key={id} className="relative group overflow-hidden rounded-lg shadow">
                                 <img
-                                    src={`./src/assets/child${id}.jpeg`}
+                                    src={`/child${id}.jpeg`}
                                     alt={`Child ${id}`}
                                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                                 />

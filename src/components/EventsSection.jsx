@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Calendar, MapPin, Clock } from "lucide-react";
-import event from "../assets/event.jpg"; // adjust path as needed
+import event from "/event.jpg"; // adjust path as needed
 
 
 const events = [

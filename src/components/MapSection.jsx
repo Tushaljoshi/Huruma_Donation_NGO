@@ -1,5 +1,5 @@
 import React from "react";
-import mapImage from "../assets/dotted.avif"; // Update the path as per your folder
+import mapImage from "/dotted.avif"; // Update the path as per your folder
 
 const StateSupportSection = () => {
   const supportData = [
