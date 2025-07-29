@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 2rem; /* Move to top */
+  color: #f97316; /* Tailwind orange-500 */
+  background: white;
+  padding: 8px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next {
+  right: 1rem;
+}
+
+.swiper-button-prev {
+  left: 1rem;
+}
