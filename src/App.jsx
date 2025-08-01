@@ -14,7 +14,6 @@ import MissionSection from './components/MissionSection';
 import WhatWeDoSection from './components/WhatWeDoSection';
 import VolunteerStepSection from "./components/VolunteerStepsSection"
 import HelpSection from './components/HelpSection';
-
 function App() {
   return (
     <div>

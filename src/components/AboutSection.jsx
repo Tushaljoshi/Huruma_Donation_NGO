@@ -7,12 +7,12 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="py-16 bg-white relative">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <section className="py-12 bg-white relative">
+      <div className="max-w-6xl mx-auto px-2 grid md:grid-cols-2 gap-10 items-center">
         {/* Text Content */}
         <div>
           <span className="text-orange-500 font-semibold uppercase tracking-wide">About Us</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 leading-snug">
+          <h2 className="text-4xl md:text-4xl font-bold mt-2 mb-4 leading-snug">
             An International Independent Charity Organization
           </h2>
           <h1 className="text-orange-500 mb-4">
@@ -51,7 +51,7 @@ const AboutSection = () => {
               className="relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-white text-orange-500 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300"
             >
               <PlayCircle className="w-10 h-10 md:w-12 md:h-12" />
-              {/* Pulse Animation */}
+              
               <span className="absolute w-full h-full rounded-full bg-orange-500 opacity-50 animate-ping z-[-1]"></span>
             </button>
           </div>

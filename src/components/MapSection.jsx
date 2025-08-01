@@ -1,5 +1,5 @@
 import React from "react";
-import mapImage from "/dotted.avif"; // Update the path as per your folder
+import mapImage from "/dotted.avif";
 
 const StateSupportSection = () => {
   const supportData = [
@@ -13,7 +13,10 @@ const StateSupportSection = () => {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div>
-          <h5 className="text-orange-500 font-semibold mb-2">🔥 Our Area</h5>
+          <h5 className="text-orange-500 font-semibold mb-2 flex items-center space-x-2">
+            <img src="/icon.png" alt="Fire Icon" className="w-55 h-50" />
+          </h5>
+
           <h2 className="text-4xl font-extrabold text-slate-900 mb-4">
             People Generous Is Your State
           </h2>
@@ -43,7 +46,7 @@ const StateSupportSection = () => {
         </div>
 
         {/* Right Map with Country Labels */}
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-300">
           <img
             src={mapImage}
             alt="World Map"
@@ -52,7 +55,7 @@ const StateSupportSection = () => {
 
           {/* Labels — position these absolutely */}
           {/* Australia */}
-          <div className="absolute top-[20%] left-[50%] -translate-x-1/2">
+          <div className="absolute top-[20%] left-[60%] -translate-x-1/2">
             <div className="flex flex-col items-center space-y-1">
               <div className="bg-white px-3 py-1 rounded shadow text-orange-500 text-sm">
                 Australia
@@ -79,6 +82,30 @@ const StateSupportSection = () => {
               </div>
               <div className="w-2 h-2 rounded-full bg-orange-500 animate-ping"></div>
             </div>
+          </div>
+          <div className="absolute bottom-[40%] right-[10%] -translate-x-1/2">
+            <div className="flex flex-col items-center space-y-1">
+              <div className="bg-white px-3 py-1 rounded shadow text-orange-500 text-sm">
+                USA
+              </div>
+              <div className="w-2 h-2 rounded-full bg-orange-500 animate-ping"></div>
+            </div>
+          </div>
+          <div className="absolute bottom-[50%] left-[56%] -translate-x-1/2">
+            <div className="flex flex-col items-center space-y-1">
+              <div className="bg-white px-3 py-1 rounded shadow text-orange-500 text-sm">
+                Maxico
+              </div>
+              <div className="w-2 h-2 rounded-full bg-orange-500 animate-ping"></div>
+            </div>
+            <div className="absolute bottom-[100%] right-[-200%] -translate-x-1/2">
+            <div className="flex flex-col items-center space-y-1">
+              <div className="bg-white px-3 py-1 rounded shadow text-orange-500 text-sm">
+                Russia
+              </div>
+              <div className="w-2 h-2 rounded-full bg-orange-500 animate-ping"></div>
+            </div>
+          </div>
           </div>
         </div>
       </div>

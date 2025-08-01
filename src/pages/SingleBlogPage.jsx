@@ -3,8 +3,8 @@ import { Mail, Phone, MapPin, Heart } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import { useState } from "react";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-const blogrightsliderData = [
+import Trans_Navbar from "../components/Trans_Navbar";
+const SingleBlogPageData = [
     {
         image: "/child1.jpeg",
         date: "June 30, 2024",
@@ -68,22 +68,22 @@ const blogrightsliderData = [
 
 ];
 
-const BlogRightSlider = () => {
+const SingleBlogPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const postsPerPage = 6;
 
     const indexOfLast = currentPage * postsPerPage;
     const indexOfFirst = indexOfLast - postsPerPage;
-    const currentPosts = blogrightsliderData.slice(indexOfFirst, indexOfLast);
+    const currentPosts =SingleBlogPageData.slice(indexOfFirst, indexOfLast);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
-    const totalPages = Math.ceil(blogrightsliderData.length / postsPerPage);
+    const totalPages = Math.ceil(SingleBlogPageData.length / postsPerPage);
     return (
         <div className="w-full">
-            <Navbar />
+            <Trans_Navbar/>
             {/* Hero Section */}
             <div
-                className="relative h-[600px] w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
+                className="relative h-[500px] w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
                 style={{
                     backgroundImage: 'url("/causes.jpg")',
                 }}
@@ -99,8 +99,6 @@ const BlogRightSlider = () => {
             <div className="bg-white text-gray-800 font-sans min-h-screen">
                 {/* Main Container */}
                 <div className="max-w-[1440px] mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-[2fr,1fr] gap-10">
-
-                    {/* Blog Cards Section */}
                     <div>
                         <div className="grid md:grid-cols-2 gap-8">
                             {currentPosts.map((post) => (
@@ -159,7 +157,7 @@ const BlogRightSlider = () => {
                         <div className="bg-white p-4 rounded shadow-lg">
                             <h4 className="text-xl font-bold mb-4 border-b pb-2 text-[#1e1e1e]">Popular Posts</h4>
                             <ul className="space-y-4">
-                                {Single.slice(0, 4).map((post, index) => (
+                                {SingleBlogPageData.slice(0, 4).map((post, index) => (
                                     <div key={index} className="flex items-start space-x-3 mb-2">
                                         <img
                                             src={post.image}
@@ -219,16 +217,18 @@ const BlogRightSlider = () => {
                     </aside>
                 </div>
             </div>
-
-            <section className="bg-gray-100 py-12 px-4">
-                <div className="max-w-9xl mx-auto text-center">
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 ">
+            <section className="bg-white hidden sm:block">
+                <div className="max-w-[35000px] mx-auto text-center px-2">
+                    <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5">
                         {[1, 2, 3, 4, 5].map((id) => (
-                            <div key={id} className="relative group overflow-hidden rounded-lg shadow">
+                            <div
+                                key={id}
+                                className="relative group overflow-hidden rounded-lg shadow w-full"
+                            >
                                 <img
                                     src={`/child${id}.jpeg`}
                                     alt={`Child ${id}`}
-                                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                                    className="w-full h-40 sm:h-48 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
                                     <FaInstagram className="text-white text-3xl" />
@@ -243,4 +243,4 @@ const BlogRightSlider = () => {
         </div>
     );
 };
-export default BlogRightSlider;
+export default SingleBlogPage;

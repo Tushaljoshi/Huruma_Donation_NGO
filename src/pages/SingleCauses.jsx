@@ -2,7 +2,7 @@ import React from "react";
 import { Mail, Phone, MapPin, Heart } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Trans_Navbar from "../components/Trans_Navbar";
 
 const posts = [
     {
@@ -24,14 +24,14 @@ const posts = [
         title: "Melancholy Devonshire Alteration",
         date: "June 30, 2024",
         image: <img src="/charity.jpeg" alt="Cause" className="rounded-md w-full mb-6" />
-,
+        ,
     },
     {
         id: 4,
         title: "Delicate Contempt Received Two Yet Advanced",
         date: "June 30, 2024",
         image: <img src="/charity.jpeg" alt="Cause" className="rounded-md w-full mb-6" />
-,
+        ,
     },
 ];
 
@@ -39,15 +39,15 @@ const posts = [
 export default function SingleCausesPage() {
     return (
         <div className="w-full">
-            <Navbar />
+            <Trans_Navbar />
             {/* Hero Section */}
-            <div className="relative h-64 bg-cover bg-center text-white flex items-center justify-center" style={{ backgroundImage: 'url("/causes.jpg")' }}>
-                <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-                <div className="relative z-10 text-center">
-                    <h1 className="text-4xl font-bold">Causes Details</h1>
-                    <p className="mt-2">Home / Causes Details</p>
-                </div>
-            </div>
+            <section
+                    className="relative h-[500px] bg-cover bg-center flex items-center justify-center"
+                    style={{ backgroundImage: `url(/event.jpg)` }}
+                  >
+                    <div className="absolute inset-0 bg-black/60" />
+                    <h1 className="relative text-white text-4xl font-bold z-10">Single Causes</h1>
+                  </section>
 
             <div className="bg-white text-gray-800 font-sans">
                 {/* Main Section */}
@@ -56,9 +56,9 @@ export default function SingleCausesPage() {
                     <div className="lg:col-span-2 bg-white p-4 rounded shadow-lg">
                         {/* Cause Image */}
                         <img
-                            src="/charity.jpg"
+                            src="/charity.jpeg"
                             alt="Cause"
-                            className="rounded-md w-full mb-6"
+                            className="rounded-md w-full h-15 mb-6"
                         />
 
                         {/* Progress Bar */}
@@ -79,14 +79,11 @@ export default function SingleCausesPage() {
                         <p className="text-gray-700 mb-6">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nostrum,
                             accusantium cupiditate exercitationem quaerat dolorum architecto
-                            fugiat suscipit praesentium iusto? Fuga cupiditate laboriosam fugit
-                            in, maiores a quidem labore autem accusantium! lore!
+                            fugiat suscipit praesentium iusto!
                         </p>
                         <p className="text-gray-700 mb-6">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Officia
-                            cupiditate nihil ipsam atque! Autem dolores id ducimus, ipsum
-                            magnam at quidem praesentium possimus harum quas, facere explicabo
-                            impedit atque doloremque.
+                            cupiditate nihil ipsam atque!
                         </p>
 
                         <p className="text-sm text-gray-500 mb-1">
@@ -106,18 +103,14 @@ export default function SingleCausesPage() {
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
                             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in sed quia non numquam eius modi tempora incidunt ut
-                            labore et dolore magnam aliquam quaerat.
+                            aliquip ex ea commodo consequat.
                         </p>
 
                         <p className="text-gray-700 mb-6">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
                             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in sed quia non numquam eius modi tempora incidunt ut
-                            labore et dolore magnam aliquam quaerat.
+                            aliquip ex ea commodo consequat.
                         </p>
 
                         {/* Donation Form */}
@@ -207,7 +200,7 @@ export default function SingleCausesPage() {
                         </div>
 
                         {/* Archives */}
-                            <div className="bg-white p-4 rounded shadow-lg">
+                        <div className="bg-white p-4 rounded shadow-lg">
                             <h4 className="text-lg font-bold mb-2">Archives</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
                                 <li>May 2024</li>
@@ -219,7 +212,7 @@ export default function SingleCausesPage() {
 
 
                         {/* Categories */}
-                            <div className="bg-white p-4 rounded shadow-lg">
+                        <div className="bg-white p-4 rounded shadow-lg">
                             <h4 className="text-lg font-bold mb-2">Categories</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
                                 <li>Education (10)</li>
@@ -249,15 +242,18 @@ export default function SingleCausesPage() {
                     </div>
                 </div>
             </div>
-            <section className="bg-gray-100 py-12 px-4">
-                <div className="max-w-9xl mx-auto text-center">
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 ">
+            <section className="bg-white hidden sm:block">
+                <div className="max-w-[35000px] mx-auto text-center px-2">
+                    <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5">
                         {[1, 2, 3, 4, 5].map((id) => (
-                            <div key={id} className="relative group overflow-hidden rounded-lg shadow">
+                            <div
+                                key={id}
+                                className="relative group overflow-hidden rounded-lg shadow w-full"
+                            >
                                 <img
                                     src={`/child${id}.jpeg`}
-                                    alt={`Child${id}`}
-                                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                                    alt={`Child ${id}`}
+                                    className="w-full h-40 sm:h-48 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
                                     <FaInstagram className="text-white text-3xl" />
@@ -267,7 +263,6 @@ export default function SingleCausesPage() {
                     </div>
                 </div>
             </section>
-            {/* Footer */}
             <Footer />
         </div>
     );

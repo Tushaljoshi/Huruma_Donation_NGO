@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Instagram } from 'lucide-react';
 import { FaInstagram } from "react-icons/fa";
-import Navbar from '../components/Navbar';
+import Trans_Navbar from "../components/Trans_Navbar";
 import Footer from '../components/Footer';
 import new1 from '/new1.jpg';
 import new2 from '/new2.jpg';
@@ -47,7 +47,7 @@ const blogData = [
         id: 6,
         category: "Health",
         date: "2 March",
-        title: "Raising Funds for Medical Aid to the Poor",
+        title: "Raising Funds for Medical Aid to the Poor and Needy",
         image: new3,
     },
     {
@@ -86,11 +86,11 @@ const BlogPage = () => {
 
     return (
         <div className="min-h-screen bg-gray-100">
-            <Navbar />
+            <Trans_Navbar />
 
             {/* Hero Section */}
             <section
-                className="relative h-[700px] bg-cover bg-center flex items-center justify-center text-white"
+                className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-white"
                 style={{ backgroundImage: "url('/event.jpg')" }}
             >
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
@@ -135,8 +135,8 @@ const BlogPage = () => {
                             key={number}
                             onClick={() => paginate(number)}
                             className={`px-4 py-2 rounded border text-sm font-medium ${currentPage === number
-                                    ? 'bg-orange-600 text-white'
-                                    : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-200'
+                                ? 'bg-orange-600 text-white'
+                                : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-200'
                                 }`}
                         >
                             {number}
@@ -144,17 +144,18 @@ const BlogPage = () => {
                     ))}
                 </div>
             </div>
-            <section className="bg-gray-100 py-12 px-4">
-                <div className="max-w-9xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold mb-8">Children We Helped</h2>
-
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 ">
+            <section className="bg-white hidden sm:block">
+                <div className="max-w-[35000px] mx-auto text-center px-2">
+                    <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5">
                         {[1, 2, 3, 4, 5].map((id) => (
-                            <div key={id} className="relative group overflow-hidden rounded-lg shadow">
+                            <div
+                                key={id}
+                                className="relative group overflow-hidden rounded-lg shadow w-full"
+                            >
                                 <img
                                     src={`/child${id}.jpeg`}
                                     alt={`Child ${id}`}
-                                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                                    className="w-full h-40 sm:h-48 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
                                     <FaInstagram className="text-white text-3xl" />
@@ -168,5 +169,4 @@ const BlogPage = () => {
         </div>
     );
 };
-
 export default BlogPage;

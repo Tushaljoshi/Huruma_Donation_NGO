@@ -102,8 +102,8 @@ const Footer = () => {
 
       {/* Divider & Branding */}
       <div className="border-t border-gray-800 pt-6 pb-3 text-center">
-        <div className="mb-3 flex justify-center">
-          <img src="/logo-white.png" alt="logo" className="h-10" /> {/* Update image path */}
+        <div className="mb-2 flex justify-center">
+          <img src="/logo.png" alt="logo" className="h-15" /> {/* Update image path */}
         </div>
         <p className="text-gray-400 text-xs">
           Copyright @2025 Huruma. All Rights Reserved

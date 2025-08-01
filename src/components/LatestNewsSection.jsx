@@ -37,7 +37,7 @@ const LatestNewsSection = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-orange-500 font-semibold uppercase tracking-wide">📖 Our Blog</span>
+          <span className="text-orange-500 font-semibold uppercase tracking-wide">Our Blog</span>
           <h2 className="text-4xl font-bold text-gray-800 mt-2 mb-4">Check Out Our Latest News</h2>
         </div>
 

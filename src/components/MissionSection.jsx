@@ -41,8 +41,8 @@ const MissionSection = () => {
 
       {/* Right Content */}
       <div className="w-full md:w-1/2 relative">
-        <p className="text-orange-500 font-semibold mb-2 flex items-center gap-2">
-          🎯 Our Mission
+        <p className="text-orange-500 font-semibold mb-4 flex items-center gap-2">
+         Our Mission
         </p>
         <h2 className="text-3xl md:text-4xl font-bold text-[#1e1b4b] mb-4">
           {tabData[activeTab].title}

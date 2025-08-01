@@ -12,8 +12,12 @@ import Team from "./pages/Team";
 import Event from "./pages/Event";
 import FAQ from "./pages/FAQ"
 import Feedback from "./pages/Feedback"
-import SingleBlogPage from "./pages/BlogRightSlider";
-
+import SingleBlogPage from "./pages/SingleBlogPage";
+import Trans_Navbar from "./components/Trans_Navbar";
+import AboutNavSection from "./components/AboutNavSection"; 
+import Login from "./pages/login"; 
+import Signup from "./pages/SignUp"; 
+import ResetPassword from "./pages/ResetPassword";
 export default function MainRouter() {
   return (
     <Routes>
@@ -29,6 +33,12 @@ export default function MainRouter() {
       <Route path="/faq" element={<FAQ />} />
       <Route path="/feedback" element={<Feedback />} />
       <Route path="/blog/:id" element={<SingleBlogPage />} />
+      <Route path="/tarns_navbar" element={<Trans_Navbar/>}/>
+      <Route path="/about-nav-section" element={<AboutNavSection />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+     <Route path="/reset-password" element={<ResetPassword/>} />
+      
 
     </Routes>
   );

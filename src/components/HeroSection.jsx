@@ -44,14 +44,14 @@ const HeroSection = () => {
   );
   return (
     <section
-      className="relative min-h-[80vh] md:min-h-screen w-full bg-cover bg-center transition-all duration-700"
+      className="relative min-h-[80vh] md:min-h-screen w-full-screen bg-cover bg-center transition-all duration-700"
       style={{ backgroundImage: `url(${currentImage})` }}
     >
       <div className="absolute inset-0 bg-black/60 flex items-center justify-center px-4">
         <div className="text-center text-white max-w-3xl mx-auto">
           {renderAnimatedText("Huruma", "font-serif", "text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold", `heading-${currentImageIndex}`)}
           {renderAnimatedText("Bringing Smiles To Millions!", "font-mono", "text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold", `subheading-${currentImageIndex}`)}
-          {renderAnimatedText("We are a charity organization supporting vulnerable children and families.", "font-sans", "text-base sm:text-lg md:text-xl font-light", `desc-${currentImageIndex}`)}
+          {renderAnimatedText("We are a charity organization supporting vulnerable children and families.", "font-semibold", "text-base sm:text-lg md:text-xl font-light", `desc-${currentImageIndex}`)}
 
 
           <motion.button
@@ -64,8 +64,6 @@ const HeroSection = () => {
           </motion.button>
         </div>
       </div>
-
-      {/* Thumbnails */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 sm:gap-4">
         {heroImages.map((img, index) => (
           <img

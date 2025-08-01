@@ -1,16 +1,16 @@
 import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
-import Navbar from "../components/Navbar";
+import Trans_Navbar from "../components/Trans_Navbar";
 import Footer from "../components/Footer";
 
 
 export default function ContactPage() {
   return (
     <>
-      <Navbar />
+      <Trans_Navbar/>
 
       {/* Hero Section */}
-      <div className="relative h-85 bg-black">
+      <div className="relative h-[500px] bg-black">
         <img
           src="/event.jpg"
           alt="Contact Banner"
@@ -94,8 +94,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* Map Section */}
       <div className="w-full">
         <iframe
           src="https://www.google.com/maps?q=New York, USA&output=embed"

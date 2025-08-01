@@ -9,7 +9,7 @@ const WhatWeDoSection = () => {
         {/* Section Heading */}
         <div className="text-center mb-16">
           <p className="text-orange-500 font-semibold flex items-center justify-center gap-2">
-            <span className="text-xl">📑</span> What We Do
+            <span className="text-xl"></span> What We Do
           </p>
           <h2 className="text-4xl font-extrabold text-slate-800 mt-3 mb-4 font-serif">
             A Mission To Solve A Problem
@@ -24,7 +24,7 @@ const WhatWeDoSection = () => {
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Card 1 */}
-          <div className="bg-orange-50 p-6 rounded border border-orange-100 text-center hover:shadow-md transition">
+          <div className="bg-white p-6 rounded border border-orange-200 text-center hover:bg-orange-50">
             <GraduationCap className="mx-auto h-10 w-10 text-orange-400 mb-4" />
             <h3 className="text-lg font-semibold text-slate-800 mb-2">
               Education Facilities
@@ -36,7 +36,7 @@ const WhatWeDoSection = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-orange-50 p-6 rounded border border-orange-100 text-center hover:shadow-md transition">
+          <div className="bg-white p-6 rounded border border-orange-200 text-center hover:bg-orange-50">
             <Stethoscope className="mx-auto h-10 w-10 text-orange-400 mb-4" />
             <h3 className="text-lg font-semibold text-slate-800 mb-2">
               Medical Facilities
@@ -48,7 +48,7 @@ const WhatWeDoSection = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-orange-50 p-6 rounded border border-orange-100 text-center hover:shadow-md transition">
+          <div className="bg-white p-6 rounded border border-orange-200 text-center hover:bg-orange-50">
             <Users className="mx-auto h-10 w-10 text-orange-400 mb-4" />
             <h3 className="text-lg font-semibold text-slate-800 mb-2">
               Healthy Food
@@ -60,7 +60,7 @@ const WhatWeDoSection = () => {
           </div>
 
           {/* Card 4 */}
-          <div className="bg-orange-50 p-6 rounded border border-orange-100 text-center hover:shadow-md transition">
+          <div className="bg-white p-6 rounded border border-orange-200 text-center hover:bg-orange-50">
             <Droplet className="mx-auto h-10 w-10 text-orange-400 mb-4" />
             <h3 className="text-lg font-semibold text-slate-800 mb-2">
               Pure Water

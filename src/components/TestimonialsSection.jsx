@@ -5,6 +5,7 @@ import { Star} from "lucide-react";
 import "swiper/css";
 import "swiper/css/pagination";
 
+
 const testimonials = [
   {
     id: 1,
@@ -39,28 +40,25 @@ const TestimonialsSwiper = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mt-[-20] mb-6">
           <div className="flex justify-center">
           </div>
-          <p className="text-orange-500 font-semibold mt-2">Testimonials</p>
+          <p className="text-orange-500 font-semibold">Testimonials</p>
           <h2 className="text-4xl font-bold text-slate-800 mt-1">Don’t Believe Us? See Review</h2>
           <p className="text-xl font-semibold text-slate-600 mt-2">Precious Journey With You</p>
         </div>
-
-        {/* Swiper */}
         <Swiper
           modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 1000 }}
+          autoplay={{ delay: 2000 }}
+          speed={1000}
           loop
           spaceBetween={30}
           slidesPerView={1}
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="grid md:grid-cols-3 items-center gap-10 bg-white p-8 shadow-xl rounded-xl border border-gray-100">
-                {/* Profile */}
+              <div className="grid md:grid-cols-3 items-center bg-white p-4">
                 <div className="flex flex-col items-center md:items-start text-center md:text-left">
                   <img
                     src={testimonial.image}
@@ -75,11 +73,7 @@ const TestimonialsSwiper = () => {
                     ))}
                   </div>
                 </div>
-
-                {/* Divider */}
-                <div className="hidden md:block h-32 border-l mx-auto"></div>
-
-                {/* Review Text */}
+                <div className="hidden h-32 border-l"></div>
                 <div className="md:col-span-2 text-center md:text-left">
                   <p className="text-gray-600 text-lg italic leading-relaxed">
                     “{testimonial.review}”

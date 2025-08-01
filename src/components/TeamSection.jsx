@@ -26,10 +26,9 @@ const TeamSection = () => {
         {/* Heading */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 text-orange-500 font-medium text-lg">
-            <span>📣</span>
             <span>Meet Our Team</span>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-center mt-4">
             <button className="bg-[#1e1b4b] text-white px-6 py-3 rounded-full hover:bg-orange-500 transition font-medium flex items-center gap-2">
               Meet Our Team →
             </button>

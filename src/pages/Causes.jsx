@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa";
-import Navbar from "../components/Navbar";
+import Trans_Navbar from "../components/Trans_Navbar";
 import Footer from "../components/Footer";
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 // Replace with real images in /public/images or src/assets
 const causesData = [
     {
@@ -46,7 +47,7 @@ const causesData = [
     },
     {
         id: 5,
-        image: "/child5.jpeg",
+        image: "/child1.jpeg",
         tag: "#Support",
         title: "Distribute Winter Clothes",
         raised: "₹8,000",
@@ -94,19 +95,18 @@ const CausesPage = () => {
 
     return (
         <div className="min-h-screen bg-gray-100">
-            <Navbar />
+            <Trans_Navbar />
             {/* Hero */}
             <section
-                className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-white"
+                className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-white"
                 style={{ backgroundImage: "url('/hero1.jpg')" }}
             >
                 <h1 className="text-4xl font-bold drop-shadow-lg">Our Causes</h1>
             </section>
 
-            {/* Causes Grid */}
-            <section className="max-w-7xl mx-auto px-4 py-12">
+            <section className="max-w-6xl mx-auto px-4 py-12">
                 <h2 className="text-3xl font-bold text-center mb-10">Children We Helped</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
                     {currentCauses.map((cause) => {
                         const percent =
                             (parseInt(cause.raised.replace(/\D/g, "")) /
@@ -116,22 +116,16 @@ const CausesPage = () => {
                         return (
                             <div
                                 key={cause.id}
-                                className="group relative overflow-hidden rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
-                            >
+                                className="group relative overflow-hidden rounded-xl shadow-md transition-transform duration-300">
                                 <img
                                     src={cause.image}
                                     alt={cause.title}
                                     className="w-full h-85 object-cover"
                                 />
-
-                                {/* Hover Content */}
                                 <div
-                                    className={`
-                    absolute inset-x-0 bottom-0 z-5
-                    rounded-t-[40px] px-6 pb-6 pt-10 transition-all duration-500 ease-in-out 
-                    translate-y-[1%] group-hover:translate-y-0 
-                    bg-[#2f2e41] group-hover:bg-orange-500
-                  `}
+                                    className={`absolute inset-x-0 bottom-0 z-5 rounded-t-[40px] px-6 pt-10 pb-20 transition-all duration-500 ease-in-out 
+                                                translate-y-[1%] group-hover:translate-y-0 
+                                                    bg-[#2c2546] group-hover:bg-orange-500`}
                                 >
                                     <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-md">
                                         <span className="text-orange-500 text-xl">
@@ -165,45 +159,68 @@ const CausesPage = () => {
                                         Raised by {cause.people} people within {cause.days}
                                     </p>
 
-                                    <button className="mt-4 bg-white text-orange-500 font-semibold px-5 py-2 rounded-full text-sm shadow hover:bg-gray-100 transition">
-                                        Donate Now →
-                                    </button>
+                                    <div className="relative group">
+                                        <div className="absolute left-1/2 transform -translate-x-1/2 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out z-5">
+                                            <button className="bg-white text-orange-500 font-semibold px-5 py-2 rounded-full text-sm shadow hover:bg-gray-100 transition">
+                                                Donate Now →
+                                            </button>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         );
                     })}
                 </div>
-
-                {/* Pagination */}
-                <div className="mt-10 flex justify-center items-center gap-4">
+                <div className="mt-10 flex justify-center items-center gap-2">
+                    {/* Previous Arrow */}
                     <button
                         onClick={prevPage}
                         disabled={currentPage === 1}
-                        className="px-4 py-2 bg-orange-500 text-white rounded disabled:opacity-50"
+                        className="w-10 h-10 flex items-center justify-center border rounded shadow-sm bg-white text-gray-700 disabled:opacity-50"
                     >
-                        Previous
+                        <ChevronLeft size={18} />
                     </button>
-                    <span className="text-gray-700 font-semibold">
-                        Page {currentPage} of {totalPages}
-                    </span>
+
+                    {/* Page Numbers */}
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                        <button
+                            key={page}
+                            onClick={() => setCurrentPage(page)}
+                            className={`w-10 h-10 flex items-center justify-center rounded shadow-sm border text-sm font-semibold ${currentPage === page
+                                ? "bg-orange-500 text-white"
+                                : "bg-white text-gray-800"
+                                }`}
+                        >
+                            {page}
+                        </button>
+                    ))}
+
+                    {/* Next Arrow */}
                     <button
                         onClick={nextPage}
                         disabled={currentPage === totalPages}
-                        className="px-4 py-2 bg-orange-500 text-white rounded disabled:opacity-50"
+                        className="w-10 h-10 flex items-center justify-center border rounded shadow-sm bg-white text-gray-700 disabled:opacity-50"
                     >
-                        Next
+                        <ChevronRight size={18} />
                     </button>
                 </div>
+
+
             </section>
-            <section className="bg-gray-100 py-12 px-4">
-                <div className="max-w-9xl mx-auto text-center">
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 ">
+
+            <section className="bg-white hidden sm:block">
+                <div className="max-w-[35000px] mx-auto text-center px-2">
+                    <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5">
                         {[1, 2, 3, 4, 5].map((id) => (
-                            <div key={id} className="relative group overflow-hidden rounded-lg shadow">
+                            <div
+                                key={id}
+                                className="relative group overflow-hidden rounded-lg shadow w-full"
+                            >
                                 <img
                                     src={`/child${id}.jpeg`}
                                     alt={`Child ${id}`}
-                                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                                    className="w-full h-40 sm:h-48 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
                                     <FaInstagram className="text-white text-3xl" />
