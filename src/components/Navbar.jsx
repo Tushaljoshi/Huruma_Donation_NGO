@@ -9,6 +9,7 @@ import {
   Menu,
   ChevronDown,
 } from "lucide-react";
+import SideAboutPanel from "./SideAboutPanel";
 
 const Navbar = () => {
   const [langOpen, setLangOpen] = useState(false);
@@ -16,6 +17,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [userOpen, setUserOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
 
   const handleScroll = () => {
@@ -229,9 +231,19 @@ const Navbar = () => {
                 />
               </div>
             )}
-            <Link to="#" className="bg-orange-500 px-3 py-3 rounded-sm hidden lg:block">
-              <Menu size={20} />
-            </Link>
+            <>
+              {/* Button to open the About Panel */}
+              <button
+                onClick={() => setIsOpen(true)}
+                className="bg-orange-500 px-3 py-3 rounded-sm hidden lg:block"
+              >
+                <Menu size={20} />
+              </button>
+
+              {/* About Panel */}
+              <SideAboutPanel isOpen={isOpen} onClose={() => setIsOpen(false)} />
+            </>
+
 
             <button
               className={`lg:hidden p-2 rounded-md transition-colors duration-300 ${scrolled ? "text-black hover:bg-gray-100" : "text-white hover:bg-white/10"

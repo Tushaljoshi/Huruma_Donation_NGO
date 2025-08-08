@@ -28,7 +28,6 @@ function App() {
       <MissionSection/>
       <TeamSection/>
       <EventsSection/>
-
       <TestimonialsSection/>
       <HelpSection/>
       <LatestNewsSection/>

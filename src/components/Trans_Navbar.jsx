@@ -9,11 +9,13 @@ import {
     Menu,
     ChevronDown,
 } from "lucide-react";
+import SideAboutPanel from "./SideAboutPanel";
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const handleScroll = () => {
         const scrollTop = window.scrollY;
@@ -204,12 +206,18 @@ const Navbar = () => {
                                 />
                             </div>
                         )}
-                        <Link
-                            to="/AboutSection"
-                            className="bg-orange-500 px-3 py-3 rounded-sm hidden lg:block"
-                        >
-                            <Menu size={20} />
-                        </Link>
+                        <>
+                            {/* Button to open the About Panel */}
+                            <button
+                                onClick={() => setIsOpen(true)}
+                                className="bg-orange-500 px-3 py-3 rounded-sm hidden lg:block"
+                            >
+                                <Menu size={20} />
+                            </button>
+
+                            {/* About Panel */}
+                            <SideAboutPanel isOpen={isOpen} onClose={() => setIsOpen(false)} />
+                        </>
 
                         <button
                             className="lg:hidden text-black"
@@ -228,9 +236,9 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {mobileOpen && (
-                
-                <div className="bg-white text-black lg:hidden px-6 py-4 space-y-4 shadow-md">  
-                <div className="mt-20"></div> 
+
+                <div className="bg-white text-black lg:hidden px-6 py-4 space-y-4 shadow-md">
+                    <div className="mt-20"></div>
                     <Link to="/" className="block hover:text-orange-500">Home</Link>
                     <Link to="/about" className="block hover:text-orange-500">
                         About

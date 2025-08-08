@@ -18,6 +18,7 @@ import AboutNavSection from "./components/AboutNavSection";
 import Login from "./pages/login"; 
 import Signup from "./pages/SignUp"; 
 import ResetPassword from "./pages/ResetPassword";
+import SideAboutPanel from "./components/SideAboutPanel";
 export default function MainRouter() {
   return (
     <Routes>
@@ -37,9 +38,8 @@ export default function MainRouter() {
       <Route path="/about-nav-section" element={<AboutNavSection />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-     <Route path="/reset-password" element={<ResetPassword/>} />
-      
-
+      <Route path="/reset-password" element={<ResetPassword/>} />
+      <Route path="/side-about-panel" element={<SideAboutPanel />} />
     </Routes>
   );
 }
