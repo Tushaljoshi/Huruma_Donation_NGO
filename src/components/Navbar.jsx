@@ -44,14 +44,11 @@ const Navbar = () => {
 
   const HomeDropdown = [{ path: "/", label: "Home one" }];
   const pagesDropdown = [
-    { path: "/about", label: "About" },
     { path: "/blog", label: "Blog" },
-    { path: "/contact", label: "Contact" },
     { path: "/team", label: "Team" },
     { path: "/event", label: "Events" },
     { path: "/faq", label: "FAQ" },
     { path: "/feedback", label: "Feedbacks" },
-    { path: "/user", label: "Users" },
   ];
   const CausesDropdown = [
     { path: "/causes", label: "Causes" },
@@ -66,7 +63,8 @@ const Navbar = () => {
   return (
     <header className="relative z-50">
       {/* Top Bar */}
-      <div className={`bg-white text-sm text-gray-700 flex justify-between px-6 py-2 items-center border-b transition-all duration-300 ${scrolled ? 'hidden' : 'block'}`}>
+      <div className={`hidden md:flex bg-white text-sm text-gray-700 justify-between px-3 items-center border-b transition-all duration-300 ${scrolled ? 'hidden' : 'flex'}`}>
+
         <span>
           The fund will go to the poor...{" "}
           <a href="#" className="text-orange-500 font-medium">
@@ -85,8 +83,8 @@ const Navbar = () => {
       </div>
 
       {/* Sticky Navbar */}
-      <div className={`fixed left-0 w-full z-50 transition-all ${scrolled ? "top-0 bg-white text-black shadow-md" : "top-[40px] bg-[#2c2546] text-white"}`}>
-        <div className="flex justify-between items-center px-6 py-4">
+      <div className={`fixed left-0 w-full z-50 transition-all ${scrolled ? "top-0 bg-white text-black shadow-md" : "bg-[#2c2546] text-white"}`}>
+        <div className="flex justify-between items-center px-4 py-2">
           {/* Logo */}
           <div className="flex items-center px-6 py-3">
             <img
@@ -99,22 +97,9 @@ const Navbar = () => {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex gap-8 text-sm items-center relative">
             {/* Home Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center gap-1 hover:text-orange-500">
-                Home <ChevronDown size={14} />
-              </button>
-              <div className="absolute top-6 left-0 bg-white text-black shadow-md rounded z-30 min-w-[150px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                {HomeDropdown.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.path}
-                    className="block px-4 py-2 text-sm hover:bg-orange-100"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link to="/" className="hover:text-orange-500">
+              Home
+            </Link>
 
             <Link to="/about" className="hover:text-orange-500">
               About
@@ -180,7 +165,7 @@ const Navbar = () => {
           </nav>
 
           <div className="flex items-center gap-4">
-            {/* Language */}
+            {/* Language 
             <div className="relative group">
               <button className="flex items-center gap-2 border px-2 py-1 rounded text-sm">
                 <span>🇺🇸</span> Eng <ChevronDown size={12} />
@@ -194,7 +179,7 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div>*/}
 
             {/* User */}
             <div className="relative group">
@@ -248,9 +233,14 @@ const Navbar = () => {
               <Menu size={20} />
             </Link>
 
-            <button className="lg:hidden text-black" onClick={() => setMobileOpen(!mobileOpen)}>
+            <button
+              className={`lg:hidden p-2 rounded-md transition-colors duration-300 ${scrolled ? "text-black hover:bg-gray-100" : "text-white hover:bg-white/10"
+                }`}
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
               <Menu size={24} />
             </button>
+
           </div>
         </div>
       </div>
@@ -264,19 +254,13 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="bg-white text-black lg:hidden px-6 py-4 space-y-4 shadow-md">
-          <details>
-            <summary className="cursor-pointer hover:text-orange-500">Home</summary>
-            <div className="ml-4 mt-2 space-y-2">
-              {HomeDropdown.map((item, i) => (
-                <Link key={i} to={item.path} className="block hover:text-orange-500" onClick={() => setMobileOpen(false)}>
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </details>
+          <div className="mt-20"></div>
+          <Link to="/" className="hover:text-orange-500">
+            Home
+          </Link>
 
           <Link to="/about" className="block hover:text-orange-500">About</Link>
-
+          <Link to="/contact" className="block hover:text-orange-500">Contact</Link>
           <details>
             <summary className="cursor-pointer hover:text-orange-500">Causes</summary>
             <div className="ml-4 mt-2 space-y-2">
@@ -309,8 +293,6 @@ const Navbar = () => {
               ))}
             </div>
           </details>
-
-          <Link to="/contact" className="block hover:text-orange-500">Contact</Link>
         </div>
       )}
     </header>

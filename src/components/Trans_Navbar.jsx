@@ -41,14 +41,11 @@ const Navbar = () => {
 
     const HomeDropdown = [{ path: "/", label: "Home one" }];
     const pagesDropdown = [
-        { path: "/about", label: "About" },
         { path: "/blog", label: "Blog" },
-        { path: "/contact", label: "Contact" },
         { path: "/team", label: "Team" },
         { path: "/event", label: "Events" },
         { path: "/faq", label: "FAQ" },
         { path: "/feedback", label: "Feedbacks" },
-        { path: "/user", label: "Users" },
     ];
     const CausesDropdown = [
         { path: "/causes", label: "Causes" },
@@ -63,7 +60,7 @@ const Navbar = () => {
     return (
         <header className="relative z-50">
             <div
-                className={`fixed left-0 w-full z-50 transition-all duration-300 ${scrolled ? "top-0 bg-white text-black shadow-md" : "text-white"
+                className={`fixed left-0 w-full z-50 transition-all duration-300 ${scrolled ? "top-0 text-black bg-white shadow-md" : "text-white bg-transparent"}
                     }`}
             >
                 <div className="flex justify-between items-center px-6 py-4">
@@ -77,22 +74,7 @@ const Navbar = () => {
 
                     <nav className="hidden lg:flex gap-8 text-sm items-center relative">
                         {/* Home */}
-                        <div className="relative group">
-                            <button className="flex items-center gap-1 hover:text-orange-500">
-                                Home <ChevronDown size={14} />
-                            </button>
-                            <div className="absolute top-6 left-0 bg-white text-black shadow-md rounded z-30 min-w-[150px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                {HomeDropdown.map((item, index) => (
-                                    <Link
-                                        key={index}
-                                        to={item.path}
-                                        className="block px-4 py-2 text-sm hover:bg-orange-100"
-                                    >
-                                        {item.label}
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
+                        <Link to="/" className="block hover:text-orange-500">Home</Link>
 
                         <Link to="/about" className="hover:text-orange-500">
                             About
@@ -159,8 +141,7 @@ const Navbar = () => {
 
                     {/* Right Icons */}
                     <div className="flex items-center gap-4">
-                        {/* Language */}
-                        <div className="relative group">
+                        {/*<div className="relative group">
                             <button className="flex items-center gap-2 border px-2 py-1 rounded text-sm">
                                 <span>🇺🇸</span> Eng <ChevronDown size={12} />
                             </button>
@@ -173,7 +154,7 @@ const Navbar = () => {
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </div>*/}
 
                         {/* User */}
                         <div className="relative group">
@@ -247,24 +228,19 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {mobileOpen && (
-                <div className="text-black lg:hidden px-6 py-4 space-y-4 shadow-md">
-                    <details>
-                        <summary className="cursor-pointer hover:text-orange-500">Home</summary>
-                        <div className="ml-4 mt-2 space-y-2">
-                            {HomeDropdown.map((item, i) => (
-                                <Link
-                                    key={i}
-                                    to={item.path}
-                                    className="block hover:text-orange-500"
-                                    onClick={() => setMobileOpen(false)}
-                                >
-                                    {item.label}
-                                </Link>
-                            ))}
-                        </div>
-                    </details>
+                
+                <div className="bg-white text-black lg:hidden px-6 py-4 space-y-4 shadow-md">  
+                <div className="mt-20"></div> 
+                    <Link to="/" className="block hover:text-orange-500">Home</Link>
+                    <Link to="/about" className="block hover:text-orange-500">
+                        About
+                    </Link>
+                    <Link to="/contact" className="block hover:text-orange-500">
+                        Contact
+                    </Link>
                     <details>
                         <summary className="cursor-pointer hover:text-orange-500">Causes</summary>
+
                         <div className="ml-4 mt-2 space-y-2">
                             {CausesDropdown.map((item, i) => (
                                 <Link
@@ -308,12 +284,6 @@ const Navbar = () => {
                             ))}
                         </div>
                     </details>
-                    <Link to="/about" className="block hover:text-orange-500">
-                        About
-                    </Link>
-                    <Link to="/contact" className="block hover:text-orange-500">
-                        Contact
-                    </Link>
                 </div>
             )}
         </header>

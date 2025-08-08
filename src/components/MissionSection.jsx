@@ -5,8 +5,8 @@ const tabData = {
   "Our Mission": {
     title: "Concern About Our Mission",
     content: [
-      "Magna hpsum rolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad minim veniam, quis nostrud exercitation ullamco laboris nisi ex ea quis nostrud exercitation",
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, soluta, aspernatur dolorum sequi quisquam ullam in pariatur nihil dolorem cumque excepturi totam. Qui excepturi quasi cumque placeat fuga. Ea, eius?"
+      "Magna hpsum rolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, soluta, aspernatur."
     ]
   },
   "Our Vision": {
@@ -31,7 +31,7 @@ const MissionSection = () => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-center py-16 bg-white px-4 md:px-16">
       {/* Left Image */}
-      <div className="px-10 md:w-1/2 mb-6 md:mb-0">
+      <div className="px-10 md:w-1/2 mb-6 md:mb-0 postion-sticky top-0">
         <img
           src={missionImage}
           alt="Mission"

@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import Footer from "../components/Footer";
 import Trans_Navbar from "../components/Trans_Navbar";
 
+
 const posts = [
     {
         id: 1,
@@ -37,6 +38,7 @@ const posts = [
 
 
 export default function SingleCausesPage() {
+    
     return (
         <div className="w-full">
             <Trans_Navbar />

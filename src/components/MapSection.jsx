@@ -9,7 +9,7 @@ const StateSupportSection = () => {
   ];
 
   return (
-    <section className="py-20 relative bg-white">
+    <section className="py-4 mt-[-400] relative bg-white">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div>
