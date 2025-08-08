@@ -14,7 +14,6 @@ const ResetPassword = () => {
         } else {
             setMessage('');
             console.log('Reset link sent to:', email);
-            // 🔐 Trigger reset password backend API here
         }
     };
 

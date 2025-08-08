@@ -68,7 +68,6 @@ const FAQSection = () => {
         e.preventDefault();
         if (validate()) {
             console.log('Form submitted:', formData);
-            // Here you can handle the form submission, e.g., send data to an API
             alert("Form submitted successfully!");
         }
     };

@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <footer className="bg-[#2c2546] text-white">
       <div className="max-w-7xl mx-auto px-4 py-14 grid md:grid-cols-4 gap-10 text-sm">
-        {/* Contact Info */}
         <div>
           <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
           <div className="mb-4 flex items-start gap-3">
@@ -37,8 +36,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Our Support */}
         <div>
           <h3 className="text-lg font-semibold mb-6">Our Support</h3>
           <ul className="space-y-2 text-gray-300">
@@ -51,8 +48,6 @@ const Footer = () => {
             <li><a href="#">Partnership</a></li>
           </ul>
         </div>
-
-        {/* Our Services */}
         <div>
           <h3 className="text-lg font-semibold mb-6">Our Services</h3>
           <ul className="space-y-2 text-gray-300">
@@ -72,7 +67,7 @@ const Footer = () => {
 
           <div className="flex gap-4 mb-6">
             <img
-              src="/new1.jpg" // Replace with your actual image path
+              src="/new1.jpg" 
               alt="news"
               className="w-16 h-16 object-cover rounded"
             />
@@ -86,7 +81,7 @@ const Footer = () => {
 
           <div className="flex gap-4">
             <img
-              src="/new2.jpg" // Replace with your actual image path
+              src="/new2.jpg" 
               alt="news"
               className="w-16 h-16 object-cover rounded"
             />
@@ -99,11 +94,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Divider & Branding */}
       <div className="border-t border-gray-800 pt-6 pb-3 text-center">
         <div className="mb-2 flex justify-center">
-          <img src="/logo.png" alt="logo" className="h-15" /> {/* Update image path */}
+          <img src="/logo.png" alt="logo" className="h-15" />
         </div>
         <p className="text-gray-400 text-xs">
           Copyright @2025 Huruma. All Rights Reserved

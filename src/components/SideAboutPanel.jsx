@@ -34,7 +34,7 @@ const SideAboutPanel = ({ isOpen, onClose }) => {
           {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
             <img
               key={i}
-              src={`/child${i}.jpeg`} // you can update with your actual image paths
+              src={`/child${i}.jpeg`}
               alt={`child ${i}`}
               className="w-full h-16 object-cover rounded"
             />

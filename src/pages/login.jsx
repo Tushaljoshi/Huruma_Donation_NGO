@@ -22,7 +22,6 @@ const Login = () => {
         } else {
             setError('');
             console.log('Login submitted:', formData);
-            // Add actual authentication logic here
         }
     };
 

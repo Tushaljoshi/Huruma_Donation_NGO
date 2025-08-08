@@ -9,7 +9,6 @@ const AboutSection = () => {
   return (
     <section className="py-12 mb-[-200] mt-10 bg-white relative">
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Text Content */}
         <div>
           <span className="text-orange-500 font-semibold uppercase tracking-wide">
             About Us
@@ -32,8 +31,6 @@ const AboutSection = () => {
             </button>
           </div>
         </div>
-
-        {/* Image Grid with Play Button */}
         <div className="relative w-full h-[300px] sm:h-[400px] md:h-[350px]">
           <img
             src="https://img.freepik.com/free-photo/volunteers-holding-donation-boxes_53876-124515.jpg"
@@ -45,8 +42,6 @@ const AboutSection = () => {
             alt="Volunteers"
             className="absolute bottom-0 right-0 w-1/2 sm:w-[50%] rounded-lg shadow-xl border-4 border-white object-cover h-[50%] sm:h-[55%]"
           />
-
-          {/* Play Button */}
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <button
               onClick={openVideo}

@@ -49,20 +49,15 @@ const TeamSection = () => {
               key={index}
               className="group relative overflow-hidden rounded-xl shadow-lg"
             >
-              {/* Profile Image */}
               <img
                 src={member.image}
                 alt={member.name}
                 className="w-full h-96 object-cover"
               />
-
-              {/* Info */}
               <div className="p-5 text-center bg-white">
                 <h3 className="text-xl font-semibold text-[#1e1b4b]">{member.name}</h3>
                 <p className="text-orange-500 mt-1">{member.role}</p>
               </div>
-
-              {/* Sliding Social Icons */}
               <div className="absolute bottom-0 left-0 w-full py-20 translate-y-full group-hover:translate-y-0 transition-all duration-500 flex justify-center gap-4">
                 {[Facebook, Twitter, Instagram].map((Icon, idx) => (
                   <div
@@ -76,9 +71,6 @@ const TeamSection = () => {
             </div>
           ))}
         </div>
-
-        {/* CTA Button */}
-
       </div>
     </section>
   );

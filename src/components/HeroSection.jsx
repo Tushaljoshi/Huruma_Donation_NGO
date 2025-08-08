@@ -10,7 +10,6 @@ const HeroSection = () => {
   const heroImages = [hero1, hero2, hero3];
   const currentImage = heroImages[currentImageIndex];
 
-  // Detect mobile screen
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -20,16 +19,14 @@ const HeroSection = () => {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  // Auto image rotation every 8 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 8000); // 8 seconds
+    }, 8000); 
 
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
-  // Animation for each letter
   const letterVariant = {
     hidden: { opacity: 0, x: -50 },
     visible: (i) => ({

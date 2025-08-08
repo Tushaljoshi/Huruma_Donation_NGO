@@ -47,7 +47,6 @@ const CounterSection = () => {
               viewport={{ once: true }}
               className="p-4 relative"
             >
-              {/* Vertical divider */}
               {index !== counters.length - 1 && (
                 <div className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 h-16 border-r border-gray-300" />
               )}

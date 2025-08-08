@@ -71,7 +71,6 @@ const ServicesSlider = () => {
             </section>
             <div className="bg-white py-16 md:px-24">
                 <div className="grid md:grid-cols-2 items-center ml-20">
-                    {/* Left Text */}
                     <div>
                         <p className="text-orange-500 text-lg">Services</p>
                         <h2 className="text-4xl font-bold text-[#1b1941] my-4 leading-tight">
@@ -85,8 +84,6 @@ const ServicesSlider = () => {
                             Read More →
                         </button>
                     </div>
-
-                    {/* Swiper Slider */}
                     <div>
                         <Swiper
                             modules={[ Autoplay, Navigation]}

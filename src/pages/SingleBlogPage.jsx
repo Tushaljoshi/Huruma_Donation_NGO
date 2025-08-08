@@ -81,7 +81,6 @@ const SingleBlogPage = () => {
     return (
         <div className="w-full">
             <Trans_Navbar/>
-            {/* Hero Section */}
             <div
                 className="relative h-[500px] w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
                 style={{
@@ -97,7 +96,6 @@ const SingleBlogPage = () => {
             </div>
 
             <div className="bg-white text-gray-800 font-sans min-h-screen">
-                {/* Main Container */}
                 <div className="max-w-[1440px] mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-[2fr,1fr] gap-10">
                     <div>
                         <div className="grid md:grid-cols-2 gap-8">
@@ -106,14 +104,11 @@ const SingleBlogPage = () => {
                                     key={post.id}
                                     className="relative rounded-xl overflow-hidden shadow-md group transition duration-300 hover:-translate-y-1"
                                 >
-                                    {/* Image */}
                                     <img
                                         src={post.image}
                                         alt={post.title}
                                         className="h-60 w-full object-cover grayscale group-hover:grayscale-0 transition duration-300"
                                     />
-
-                                    {/* Content */}
                                     <div className="p-4 bg-white text-gray-800 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
                                         <p className="text-sm font-medium">{post.category}, {post.date}</p>
                                         <h3 className="text-lg md:text-xl font-bold leading-tight mt-1">{post.title}</h3>
@@ -121,8 +116,6 @@ const SingleBlogPage = () => {
                                 </div>
                             ))}
                         </div>
-
-                        {/* Pagination */}
                         <div className="flex justify-center mt-8 space-x-2">
                             {Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
                                 <button
@@ -138,10 +131,7 @@ const SingleBlogPage = () => {
                             ))}
                         </div>
                     </div>
-
-                    {/* Sidebar */}
                     <aside className="space-y-8">
-                        {/* Search */}
                         <div className="relative bg-white p-4 rounded shadow-lg">
                             <input
                                 type="text"
@@ -152,8 +142,6 @@ const SingleBlogPage = () => {
                                 🔍
                             </button>
                         </div>
-
-                        {/* Popular Posts */}
                         <div className="bg-white p-4 rounded shadow-lg">
                             <h4 className="text-xl font-bold mb-4 border-b pb-2 text-[#1e1e1e]">Popular Posts</h4>
                             <ul className="space-y-4">
@@ -174,8 +162,6 @@ const SingleBlogPage = () => {
                                 ))}
                             </ul>
                         </div>
-
-                        {/* Archives */}
                         <div className="bg-white p-4 rounded shadow-lg">
                             <h4 className="text-lg font-bold mb-2">Archives</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -185,8 +171,6 @@ const SingleBlogPage = () => {
                                 <li>July 2024</li>
                             </ul>
                         </div>
-
-                        {/* Categories */}
                         <div className="bg-white p-4 rounded shadow-lg">
                             <h4 className="text-lg font-bold mb-2">Categories</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -197,8 +181,6 @@ const SingleBlogPage = () => {
                                 <li>Health (16)</li>
                             </ul>
                         </div>
-
-                        {/* Tags */}
                         <div className="bg-white p-4 rounded shadow-lg">
                             <h4 className="text-lg font-bold mb-2">Tags</h4>
                             <div className="flex flex-wrap gap-2">
@@ -238,7 +220,6 @@ const SingleBlogPage = () => {
                     </div>
                 </div>
             </section>
-            {/* Footer */}
             <Footer />
         </div>
     );

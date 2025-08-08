@@ -11,7 +11,6 @@ const StateSupportSection = () => {
   return (
     <section className="py-4 mt-[-400] relative bg-white">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-        {/* Left Content */}
         <div>
           <h5 className="text-orange-500 font-semibold mb-2 flex items-center space-x-2">
             <img src="/icon.png" alt="Fire Icon" className="w-55 h-50" />
@@ -44,17 +43,12 @@ const StateSupportSection = () => {
             </div>
           ))}
         </div>
-
-        {/* Right Map with Country Labels */}
         <div className="relative w-full h-300">
           <img
             src={mapImage}
             alt="World Map"
             className="w-full h-auto object-contain"
           />
-
-          {/* Labels — position these absolutely */}
-          {/* Australia */}
           <div className="absolute top-[20%] left-[60%] -translate-x-1/2">
             <div className="flex flex-col items-center space-y-1">
               <div className="bg-white px-3 py-1 rounded shadow text-orange-500 text-sm">
@@ -63,8 +57,6 @@ const StateSupportSection = () => {
               <div className="w-2 h-2 rounded-full bg-orange-500 animate-ping"></div>
             </div>
           </div>
-
-          {/* Argentina */}
           <div className="absolute top-[40%] left-[30%] -translate-x-1/2">
             <div className="flex flex-col items-center space-y-1">
               <div className="bg-white px-3 py-1 rounded shadow text-orange-500 text-sm">
@@ -73,8 +65,6 @@ const StateSupportSection = () => {
               <div className="w-2 h-2 rounded-full bg-orange-500 animate-ping"></div>
             </div>
           </div>
-
-          {/* Netherland */}
           <div className="absolute bottom-[20%] left-[45%] -translate-x-1/2">
             <div className="flex flex-col items-center space-y-1">
               <div className="bg-white px-3 py-1 rounded shadow text-orange-500 text-sm">

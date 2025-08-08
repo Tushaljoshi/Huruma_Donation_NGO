@@ -62,7 +62,7 @@ const Navbar = () => {
     return (
         <header className="relative z-50">
             <div
-                className={`fixed left-0 w-full z-50 transition-all duration-300 ${scrolled ? "top-0 text-black bg-white shadow-md" : "text-white bg-transparent"}
+                className={`fixed left-0 w-full z-50 transition-all duration-300 ${scrolled ? "top-0 text-black  bg-white shadow-md" : "text-white bg-transparent"}
                     }`}
             >
                 <div className="flex justify-between items-center px-6 py-4">
@@ -75,14 +75,14 @@ const Navbar = () => {
                     </div>
 
                     <nav className="hidden lg:flex gap-8 text-sm items-center relative">
-                        {/* Home */}
+                        
                         <Link to="/" className="block hover:text-orange-500">Home</Link>
 
                         <Link to="/about" className="hover:text-orange-500">
                             About
                         </Link>
 
-                        {/* Causes */}
+                        
                         <div className="relative group">
                             <button className="flex items-center gap-1 hover:text-orange-500">
                                 Causes <ChevronDown size={14} />
@@ -100,7 +100,7 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        {/* Pages */}
+                        
                         <div className="relative group">
                             <button className="flex items-center gap-1 hover:text-orange-500">
                                 Pages <ChevronDown size={14} />
@@ -118,7 +118,6 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        {/* Blog */}
                         <div className="relative group">
                             <button className="flex items-center gap-1 hover:text-orange-500">
                                 Blog <ChevronDown size={14} />
@@ -140,8 +139,6 @@ const Navbar = () => {
                             Contact
                         </Link>
                     </nav>
-
-                    {/* Right Icons */}
                     <div className="flex items-center gap-4">
                         {/*<div className="relative group">
                             <button className="flex items-center gap-2 border px-2 py-1 rounded text-sm">
@@ -158,7 +155,6 @@ const Navbar = () => {
                             </ul>
                         </div>*/}
 
-                        {/* User */}
                         <div className="relative group">
                             <button className="flex items-center gap-2 border px-2 py-1 rounded text-sm">
                                 User <ChevronDown size={12} />
@@ -207,15 +203,12 @@ const Navbar = () => {
                             </div>
                         )}
                         <>
-                            {/* Button to open the About Panel */}
                             <button
                                 onClick={() => setIsOpen(true)}
                                 className="bg-orange-500 px-3 py-3 rounded-sm hidden lg:block"
                             >
                                 <Menu size={20} />
                             </button>
-
-                            {/* About Panel */}
                             <SideAboutPanel isOpen={isOpen} onClose={() => setIsOpen(false)} />
                         </>
 
@@ -233,8 +226,6 @@ const Navbar = () => {
                 id="scroll-progress"
                 className="h-1 bg-orange-500 fixed top-0 left-0 z-[9999] w-0 transition-all duration-300 ease-in-out"
             />
-
-            {/* Mobile Menu */}
             {mobileOpen && (
 
                 <div className="bg-white text-black lg:hidden px-6 py-4 space-y-4 shadow-md">

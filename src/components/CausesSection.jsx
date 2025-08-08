@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-// Replace with real images in /public/images or src/assets
 const causesData = [
     {
         id: 1,

@@ -9,7 +9,6 @@ export default function SingleCausesPage() {
     return (
         <div className="w-full">
             <Trans_Navbar/>
-            {/* Hero Section */}
             <div
                 className="relative h-[500px] w-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
                 style={{

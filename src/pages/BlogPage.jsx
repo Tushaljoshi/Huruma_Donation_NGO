@@ -88,7 +88,6 @@ const BlogPage = () => {
         <div className="min-h-screen bg-gray-100">
             <Trans_Navbar />
 
-            {/* Hero Section */}
             <section
                 className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-white"
                 style={{ backgroundImage: "url('/event.jpg')" }}
@@ -98,7 +97,6 @@ const BlogPage = () => {
                 </div>
             </section>
 
-            {/* Content */}
             <div className="bg-white py-10 px-4 sm:px-8 lg:px-16">
                 <h2 className="text-center text-3xl font-bold mb-8">The Causes We Care About</h2>
 
@@ -108,13 +106,11 @@ const BlogPage = () => {
                             key={post.id}
                             className="relative rounded-xl overflow-hidden shadow-lg group transition duration-300 hover:-translate-y-1"
                         >
-                            {/* Image */}
                             <img
                                 src={post.image}
                                 alt={post.title}
                                 className="h-96 w-full object-cover grayscale group-hover:grayscale-0 transition duration-300"
                             />
-                            {/* Content */}
                             <div className={`
                   p-5 relative
                   bg-white text-gray-800
@@ -127,8 +123,6 @@ const BlogPage = () => {
                         </div>
                     ))}
                 </div>
-
-                {/* Pagination */}
                 <div className="flex justify-center mt-8 space-x-2">
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
                         <button

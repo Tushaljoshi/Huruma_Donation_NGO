@@ -28,7 +28,6 @@ const Signup = () => {
         } else {
             setError('');
             console.log('Signup Submitted:', formData);
-            // 🔐 Add actual registration logic here
         }
     };
 

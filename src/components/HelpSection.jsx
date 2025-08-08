@@ -33,8 +33,6 @@ const HelpSection = () => {
         animate={{ x: [0, -30, 0] }}
         transition={{ duration: 6, repeat: Infinity }}
       />
-
-      {/* Content */}
       <div className="relative z-10 text-center max-w-2xl mx-auto px-6">
         <h2 className="text-4xl font-bold mb-4">Want You Know How Can Help?</h2>
         <p className="text-lg text-gray-300 mb-8">

@@ -42,7 +42,6 @@ export default function SingleCausesPage() {
     return (
         <div className="w-full">
             <Trans_Navbar />
-            {/* Hero Section */}
             <section
                     className="relative h-[500px] bg-cover bg-center flex items-center justify-center"
                     style={{ backgroundImage: `url(/event.jpg)` }}
@@ -52,18 +51,13 @@ export default function SingleCausesPage() {
                   </section>
 
             <div className="bg-white text-gray-800 font-sans">
-                {/* Main Section */}
                 <div className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-3 gap-10">
-                    {/* Main Content */}
                     <div className="lg:col-span-2 bg-white p-4 rounded shadow-lg">
-                        {/* Cause Image */}
                         <img
                             src="/charity.jpeg"
                             alt="Cause"
                             className="rounded-md w-full h-15 mb-6"
                         />
-
-                        {/* Progress Bar */}
                         <div className="mb-4">
                             <div className="flex justify-between text-sm text-gray-600">
                                 <span>Raised: $5000.00</span>
@@ -74,7 +68,6 @@ export default function SingleCausesPage() {
                             </div>
                         </div>
 
-                        {/* Cause Content */}
                         <h2 className="text-2xl font-bold mb-4">
                             Education For Poor Children
                         </h2>
@@ -114,8 +107,6 @@ export default function SingleCausesPage() {
                             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                             aliquip ex ea commodo consequat.
                         </p>
-
-                        {/* Donation Form */}
                         <div className="bg-gray-100 p-6 rounded-md mt-10">
                             <h3 className="text-lg font-bold mb-4">Select Payment Method</h3>
                             <div className="flex flex-wrap gap-4 mb-4">
@@ -165,9 +156,7 @@ export default function SingleCausesPage() {
                         </div>
                     </div>
 
-                    {/* Sidebar */}
                     <div className="space-y-8">
-                        {/* Search */}
                         <div className="relative bg-white p-4 rounded shadow-lg">
                             <input
                                 type="text"
@@ -178,8 +167,6 @@ export default function SingleCausesPage() {
                                 🔍
                             </button>
                         </div>
-
-                        {/* Popular Posts */}
                         <div className="bg-white p-4 rounded shadow-lg">
                             <h4 className="text-xl font-bold mb-4 border-b pb-2 text-[#1e1e1e]">Popular Posts</h4>
                             <ul className="space-y-4">
@@ -200,8 +187,6 @@ export default function SingleCausesPage() {
                                 ))}
                             </ul>
                         </div>
-
-                        {/* Archives */}
                         <div className="bg-white p-4 rounded shadow-lg">
                             <h4 className="text-lg font-bold mb-2">Archives</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -211,9 +196,6 @@ export default function SingleCausesPage() {
                                 <li>July 2024</li>
                             </ul>
                         </div>
-
-
-                        {/* Categories */}
                         <div className="bg-white p-4 rounded shadow-lg">
                             <h4 className="text-lg font-bold mb-2">Categories</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -224,8 +206,6 @@ export default function SingleCausesPage() {
                                 <li>Health (16)</li>
                             </ul>
                         </div>
-
-                        {/* Tags */}
                         <div className="bg-white p-4 rounded shadow-lg">
                             <h4 className="text-lg font-bold mb-2">Tags</h4>
                             <div className="flex flex-wrap gap-2">

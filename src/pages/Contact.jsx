@@ -8,8 +8,6 @@ export default function ContactPage() {
   return (
     <>
       <Trans_Navbar/>
-
-      {/* Hero Section */}
       <div className="relative h-[500px] bg-black">
         <img
           src="/event.jpg"
@@ -20,11 +18,10 @@ export default function ContactPage() {
           <h1 className="text-4xl font-bold">ContactUs</h1>
         </div>
       </div>
-
-      {/* Contact Section */}
       <section className="bg-white py-5 px-4 lg:py-10">
-        <div className="grid grid-cols-1 grid-cols-2 gap-5">
-          {/* Left Panel - Quick Contact Info */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+
           <div className="bg-[#231E66] text-white h-22 px-4 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold mb-10">Quick Contact</h3>
             <div className="space-y-10 text-lg">

@@ -6,7 +6,6 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-
 const events = [
   {
     id: 1,
@@ -75,7 +74,6 @@ const EventCard = ({ event }) => {
 
   return (
     <div className="flex flex-col sm:flex-row items-center sm:items-start bg-white shadow-md rounded-xl overflow-hidden p-6 gap-6 w-full">
-      {/* Left - Countdown */}
       <div className="text-center sm:border-r sm:pr-6 border-gray-200">
         <h1 className="text-3xl text-orange-500 font-bold">{daysLeft}</h1>
         <p className="text-sm text-gray-500 mt-1">
@@ -89,8 +87,6 @@ const EventCard = ({ event }) => {
           <Clock size={60} className="text-gray-500" />
         </div>
       </div>
-
-      {/* Right - Info */}
       <div className="flex-1 text-center sm:text-left">
         <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2">{event.title}</h3>
         <div className="flex flex-wrap justify-center sm:justify-start items-center text-sm text-gray-500 mb-2">
@@ -124,7 +120,6 @@ const EventsSection = () => {
     >
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
         <div className="text-center mb-8 px-4">
           <span className="text-orange-500 mt-20 font-semibold uppercase tracking-wide">Upcoming Events</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-4">Be Ready For Our Events</h2>
@@ -132,8 +127,6 @@ const EventsSection = () => {
             Event makes suspendice adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-
-        {/* Cards */}
         <div className="p-4 sm:p-6">
           <Swiper
             modules={[Autoplay]}

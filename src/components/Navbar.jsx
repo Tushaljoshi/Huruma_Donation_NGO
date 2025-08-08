@@ -64,7 +64,6 @@ const Navbar = () => {
 
   return (
     <header className="relative z-50">
-      {/* Top Bar */}
       <div className={`hidden md:flex bg-white text-sm text-gray-700 justify-between px-3 items-center border-b transition-all duration-300 ${scrolled ? 'hidden' : 'flex'}`}>
 
         <span>
@@ -84,10 +83,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Sticky Navbar */}
       <div className={`fixed left-0 w-full z-50 transition-all ${scrolled ? "top-0 bg-white text-black shadow-md" : "bg-[#2c2546] text-white"}`}>
         <div className="flex justify-between items-center px-4 py-2">
-          {/* Logo */}
           <div className="flex items-center px-6 py-3">
             <img
               src={scrolled ? "/logo_dark.png" : "/logo.png"}
@@ -95,10 +92,7 @@ const Navbar = () => {
               className="w-100 h-50 object-contain transition-all duration-300"
             />
           </div>
-
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex gap-8 text-sm items-center relative">
-            {/* Home Dropdown */}
             <Link to="/" className="hover:text-orange-500">
               Home
             </Link>
@@ -106,8 +100,6 @@ const Navbar = () => {
             <Link to="/about" className="hover:text-orange-500">
               About
             </Link>
-
-            {/* Causes */}
             <div className="relative group">
               <button className="flex items-center gap-1 hover:text-orange-500">
                 Causes <ChevronDown size={14} />
@@ -124,8 +116,6 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-
-            {/* Pages */}
             <div className="relative group">
               <button className="flex items-center gap-1 hover:text-orange-500">
                 Pages <ChevronDown size={14} />
@@ -142,8 +132,6 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-
-            {/* Blog */}
             <div className="relative group">
               <button className="flex items-center gap-1 hover:text-orange-500">
                 Blog <ChevronDown size={14} />
@@ -182,8 +170,6 @@ const Navbar = () => {
                 ))}
               </ul>
             </div>*/}
-
-            {/* User */}
             <div className="relative group">
               <button className="flex items-center gap-2 border px-2 py-1 rounded text-sm">
                 User <ChevronDown size={12} />
@@ -232,15 +218,12 @@ const Navbar = () => {
               </div>
             )}
             <>
-              {/* Button to open the About Panel */}
               <button
                 onClick={() => setIsOpen(true)}
                 className="bg-orange-500 px-3 py-3 rounded-sm hidden lg:block"
               >
                 <Menu size={20} />
               </button>
-
-              {/* About Panel */}
               <SideAboutPanel isOpen={isOpen} onClose={() => setIsOpen(false)} />
             </>
 
@@ -256,14 +239,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
-      {/* Scroll Progress */}
       <div
         id="scroll-progress"
         className={`h-1 bg-orange-500 fixed left-0 z-[9999] w-0 transition-all duration-300 ease-in-out ${scrolled ? 'top-0' : 'top-[150px]'}`}
       />
-
-      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="bg-white text-black lg:hidden px-6 py-4 space-y-4 shadow-md">
           <div className="mt-20"></div>

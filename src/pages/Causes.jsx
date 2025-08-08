@@ -3,7 +3,7 @@ import { FaInstagram } from "react-icons/fa";
 import Trans_Navbar from "../components/Trans_Navbar";
 import Footer from "../components/Footer";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-// Replace with real images in /public/images or src/assets
+
 const causesData = [
     {
         id: 1,
@@ -96,7 +96,6 @@ const CausesPage = () => {
     return (
         <div className="min-h-screen bg-gray-100">
             <Trans_Navbar />
-            {/* Hero */}
             <section
                 className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-white"
                 style={{ backgroundImage: "url('/hero1.jpg')" }}
@@ -173,7 +172,6 @@ const CausesPage = () => {
                     })}
                 </div>
                 <div className="mt-10 flex justify-center items-center gap-2">
-                    {/* Previous Arrow */}
                     <button
                         onClick={prevPage}
                         disabled={currentPage === 1}
@@ -181,8 +179,6 @@ const CausesPage = () => {
                     >
                         <ChevronLeft size={18} />
                     </button>
-
-                    {/* Page Numbers */}
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                         <button
                             key={page}
@@ -195,8 +191,6 @@ const CausesPage = () => {
                             {page}
                         </button>
                     ))}
-
-                    {/* Next Arrow */}
                     <button
                         onClick={nextPage}
                         disabled={currentPage === totalPages}
